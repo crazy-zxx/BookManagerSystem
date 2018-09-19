@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.book.entity.User" table="user">
+        <id name="stuid" type="int">
+            <column name="stuid" />
+        </id>
+        <property name="password" type="java.lang.String">
+            <column name="stupassword" />
+        </property>
+        <property name="power" type="int">
+            <column name="power" />
+        </property>
+        <property name="count" type="int">
+            <column name="count" />
+        </property>
+    </class>
+</hibernate-mapping>

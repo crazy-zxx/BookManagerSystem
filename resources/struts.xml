@@ -1,0 +1,65 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        
+<struts>
+
+	<!--
+		struts.devMode：开启开发模式。配置文件修改后会自动加载；出错时能打印出更加详细的错误说明。注意：真正运行时要改为false
+	 -->
+	<constant name="struts.devMode" value="false"></constant>
+	<!-- 将对象交给spring管理 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 指定资源编码类型 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 指定每次请求到达，重新加载资源文件 -->
+	<constant name="struts.i18n.reload" value="false" />
+	<!-- 指定每次配置文件更改后，自动重新加载 -->
+	<constant name="struts.configuration.xml.reload" value="false" />
+
+
+	<!-- 
+		struts.enable.DynamicMethodInvocation:是否允许动态方法调用。
+	 -->
+	 <!--<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant> -->
+	
+	<!-- 
+		将其他配置文件包含进来
+	 -->
+	<!-- <include file="struts-user.xml"></include>  --> 
+
+
+	<!--============begin：配置文件方式配置action==============-->
+<!--
+	name：必须有。唯一。标识一个包， 好有一定的含义。
+	extends：继承。一般要求必须继承struts-default的包。不继承该包，将无法使用struts2提供的一些核心功能。struts-default包在struts-default.xml中有配置，加载自己的struts.xml文件之前，框架就已经加载了struts-default.xml配置文件，所以我们可以使用。
+	abstract：是否是抽象包。让别人继承用的。没有任何action子元素的包就可以声明为抽象包。
+	namespace：名称空间。默认值是""，称之为默认名称空间。取值一般以/开头。
+	namespace和的name共同组成了用户访问的URI. 
+	如下：URI=/user/hello.action 
+ -->
+	<!--<package name="default" namespace="/" extends="struts-default">
+		&lt;!&ndash;
+			action：定义一个动作
+			nam['e ：动作名称。对应着用户的请求名称，默认的后缀是action或没有后缀
+			class：框架要实例化的动作类名称，全名称。默认值是：com.opensymphony.xwork2.ActionSupport。在struts-default.xml中有定义。
+			method：执行的动作类的动作方法。默认值是execute
+		 &ndash;&gt;
+		<action name="hello" class="top.dreamyy.action.HelloAction" method="helloWorld">
+			&lt;!&ndash;
+				返回结果所对应的视图设置,根据返回结果的不同,显示不不同的视图.
+			 &ndash;&gt;
+			<result name="success">Success.jsp</result>
+			<result name="fail">Fail.jsp</result>
+			<result name="success1" type="chain">
+            	&lt;!&ndash; 转发到不同名称空间下的动作 &ndash;&gt;
+            	<param name="namespace">demo1</param>
+            	<param name="actionName">demo2</param>
+        	</result>
+		</action>
+	</package>-->
+	<!--=================end====================-->
+	
+	
+	 
+</struts>
