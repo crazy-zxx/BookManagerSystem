@@ -6,7 +6,3 @@
 * 开发环境： 
 > IDEA + JDK1.8 + MySQL + Tomcat9.0.6 + Struts2 + Spring4 + Hibernate5 + jQuery 
 
-* 项目收获： 
-> ①对面向对象的设计思想有了更进一步的理解； <br>
-> ②熟悉了JSP标签、Struts标签的使用；  <br>
-> ③掌握了SSH框架结合的配置和使用。 <br>
